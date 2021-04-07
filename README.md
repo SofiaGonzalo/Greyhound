@@ -1,4 +1,4 @@
 # Greyhound
-para la clase Aplicaciones Web Orientadas a Servicios
+para la clase Aplicaciones Web Orientadas a Servicios!
 
-![image](https://user-images.githubusercontent.com/71664912/113946516-dbfbdd00-97c5-11eb-987e-21e308b40a96.png)
+![image](https://user-images.githubusercontent.com/71664912/113947510-0b134e00-97c8-11eb-96eb-5d9a452f80d0.png)
