@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Product:
+  = @sell.product_id
+%p
+  %b User:
+  = @sell.User_id
+
+= link_to 'Edit', edit_sell_path(@sell)
+\|
+= link_to 'Back', sells_path

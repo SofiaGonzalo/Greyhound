@@ -1,0 +1,23 @@
+%h1 Listing sells
+
+%table
+  %thead
+    %tr
+      %th Product
+      %th User
+      %th
+      %th
+      %th
+
+  %tbody
+    - @sells.each do |sell|
+      %tr
+        %td= sell.product_id
+        %td= sell.User_id
+        %td= link_to 'Show', sell
+        %td= link_to 'Edit', edit_sell_path(sell)
+        %td= link_to 'Destroy', sell, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Sell', new_sell_path
