@@ -12,11 +12,78 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <style>
+    .navbar-nav {
+            margin-left: auto;
+        }
+    </style>
+
   </head>
 
   <body>
+  <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #0E8530;">
+    <a class="navbar-brand" href="#homepage"><img src="https://i.ibb.co/5jWrFcg/bistorew.png" width="145" height="60" alt=""></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link text-white mr-5" href="#">
+               <h6>Catalogue</h6> 
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link text-white mr-5" href="#">
+              <h6>About</h6>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link text-white mr-5" href="#">
+                <h6>Login</h6>
+              </a>
+          </li>
+        </ul>
+    </div>
+  </nav>
     <%= yield %>
 
+
+<div class="bg-dark" style="margin-bottom: -50px">
+<div class="container text-white">
+<footer class="pt-4 my-md-5 pt-md-4">
+        <div class="row">
+          <div class="col-6 col-md">
+            <h5>Important information</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-white" href="#">Privacy Policy and Terms of Use Notices</a></li>
+              <li><a class="text-white" href="#">Terms and Conditions</a></li>
+              <li><a class="text-white" href="#">Terms and conditions of use</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Contact</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-white" href="#">developers@utch.mx</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Social media</h5>
+            <ul class="list-unstyled text-small">
+             <a href="#homepage"> <img class="mb-2 mr-3" src="https://149440826.v2.pressablecdn.com/wp-content/uploads/2020/03/instagram-png-instagram-png-logo-1455.png" alt="" width="56" height="56"></a>
+             <a href="#homepage"> <img class="mb-2" src="http://assets.stickpng.com/images/58e9196deb97430e819064f6.png" alt="" width="58" height="58"></a>
+             <a href="#homepage"> <img class="mb-2" src="https://cdn.freebiesupply.com/logos/thumbs/2x/facebook-logo-2019-thumb.png" alt="" width="90" height="65"></a>
+            </ul>
+          </div>
+          <div class="col-12 col-md">
+            <img class="mb-2 bg-white pt-1 pb-1 pl-1 pr-1" src="https://i2.wp.com/www.utch.edu.mx/wp-content/uploads/2018/08/bis.png?ssl=1" alt="" width="100" height="55">
+            <small class="d-block mb-3 text-white">© 2021 - 2021</small>
+          </div>
+        </div>
+      </footer>
+</div>
+</div>
 <!--Js files for bootstrap-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
