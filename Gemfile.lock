@@ -78,6 +78,7 @@ GEM
     ffi (1.15.0-x64-mingw32)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    gmaps4rails (2.1.2)
     hamlit (2.14.6)
       temple (>= 0.8.2)
       thor
@@ -202,6 +203,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   devise
+  gmaps4rails
   hamlit
   hamlit-rails
   jbuilder (~> 2.7)

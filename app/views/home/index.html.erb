@@ -5,11 +5,6 @@
  </head>
   <body>
 
-    <header>
-    <!-- Navbar content -->
-    
-    </header>
-
     <!--ABOUT US-->
     <div class="p-4 p-md-5 text-white bg-success  border border-secondary" style="filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));">
         <div class="px-0">
@@ -55,14 +50,35 @@
    
     <!--geo api-->
     <div class="card ml-5 mr-5"  style="filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));">
-      <div class="card-body">
-        <h5 class="card-title fw-bold text-light text-center bg-success" style="font-size: 50px;">Location</h5>
+      <div class="card-title">
+        <h5 class="card-title fw-bold text-light text-center bg-success pb-2 pt-2" style="font-size: 50px;">Location</h5>
         <p class="card-text text-center mt-4">New campus, located on the Chihuahua-Aldama highway, Km 3 s / n, Fracc. Colinas del León, C.P. 31313. (next to high school 21 and UTCH Sur).</p>
       </div>
       <div align="center">
-        <img src="https://guiauniversitaria.mx/wp-content/uploads/2020/02/Estas-son-las-5-nuevas-funciones-que-implemento%CC%81-Google-Maps.jpg" width="1000" height="500" class="mb-5 mt-4">
+            <div style='width: 800px;'>  
+                <div class ="mb-5" id="map" style='width: 800px; height: 400px;'></div>  
+            </div>  
+
+            <script type="text/javascript">  
+            handler = Gmaps.build('Google');  
+            handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){  
+            markers = handler.addMarkers([  
+                {  
+                "lat": 28.661681120954412,  
+                "lng": -106.04017808415898,  
+                "picture": {  
+                    "width":  32,  
+                    "height": 32  
+                },  
+                "infowindow": "SJSU"  
+                }  
+            ]);  
+            handler.bounds.extendWith(markers);  
+            handler.fitMapToBounds();  
+            });  
+            </script>
       </div>
     </div>
-    <!--footer-->
+
 
 </body>
