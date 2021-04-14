@@ -11,7 +11,6 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <style>
     .navbar-nav {
@@ -88,7 +87,27 @@
 </div>
 </div>
   <!--Js files for bootstrap-->
-
+  <script
+    id="paypal-sdk-js-src"
+    src="https://www.paypal.com/sdk/js?client-id=<%= ENV['paypal_client_id'] %>"
+    data-sdk-integration-source="button-factory"
+  ></script>
+  <script>
+    paypal.Buttons({
+      env: 'sandbox', // Valid values are sandbox and live.
+      createOrder: function(data, actions) {
+      // This function sets up the details of the transaction, including the amount and line item details.
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: costt // This will be replaced, I promise
+          }
+        }]
+      });
+    },
+    onApprove: async (data) => {}
+  }).render('#paypal-button-container');
+  </script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>

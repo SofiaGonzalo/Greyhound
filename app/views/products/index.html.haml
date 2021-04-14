@@ -1,0 +1,36 @@
+%h1 Listing products
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Cost
+      %th
+      %th
+      %th
+
+  %tbody
+    - @products.each do |product|
+      %tr
+        %td= product.name
+        %td= product.description
+        %td= product.cost
+        %td= link_to 'Show', product
+        %td= link_to 'Edit', edit_product_path(product)
+        %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+- @products.each do |product|
+  .card{:style => "width: 18rem;"}
+    %img.card-img-top{:alt => "Card image cap", :src => "https://i.ibb.co/0J6GJCR/Microsoft-Teams-image.jpg"}
+    .card-body
+      %h5.card-title= product.name
+      %p.card-text= product.description
+      %p.card-text= product.cost
+      %button.btn.btn-success.text-white= link_to 'Show', product
+
+%br
+%br
+= link_to 'New Product', new_product_path
