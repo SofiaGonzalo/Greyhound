@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  resources :messages, only: [:new, :create]
+  get 'messages/new'
+  get 'messages/create'
+  get 'messages/msg_params'
+  resources :products
+  devise_for :users
   root "home#index"
 
   get "/prueba", to: "home#prueba"

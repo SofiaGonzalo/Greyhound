@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+*{
+    padding:0;
+    margin: 0;
+    
+}
+
+#text_box{
+    
+    border: 5px solid darkblue;
+    height: 150px;
+    width: 100%;
+    overflow:auto;
+}
+
+#message_holder {
+
+    position: absolute;
+    top: 72%; left: 78%;    
+}
