@@ -4,8 +4,8 @@
   %thead
     %tr
       %th Name
-      %th Description
-      %th Cost
+      %th Description Price
+      %th Url
       %th
       %th
       %th
@@ -15,21 +15,25 @@
       %tr
         %td= product.name
         %td= product.description
-        %td= product.cost
+        %td= product.price
+        %td= product.url
         %td= link_to 'Show', product
         %td= link_to 'Edit', edit_product_path(product)
         %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+    %br
+  - @products.each do |product|
+    .card{:style => "width: 18rem;"}
+      %img.card-img-top{:alt => "Card image cap", :src => product.url}
+      .card-body
+        %h5.card-title= product.name
+        %p.card-text= product.description
+        %p.card-text= product.price
+        %button.btn.btn-success.text-white= link_to 'Show', product
+
 
 %br
-
-- @products.each do |product|
-  .card{:style => "width: 18rem;"}
-    %img.card-img-top{:alt => "Card image cap", :src => "https://i.ibb.co/0J6GJCR/Microsoft-Teams-image.jpg"}
-    .card-body
-      %h5.card-title= product.name
-      %p.card-text= product.description
-      %p.card-text= product.cost
-      %button.btn.btn-success.text-white= link_to 'Show', product
+%br
+'Show', product
 
 %br
 %br
