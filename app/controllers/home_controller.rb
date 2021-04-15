@@ -12,4 +12,12 @@ class HomeController < ApplicationController
   def message
     @message=Message.new
   end
+
+  def demo
+    @message=Message.new
+  end
+
+  def about
+    @message=Message.new
+  end
 end
