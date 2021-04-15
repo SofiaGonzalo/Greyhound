@@ -4,4 +4,8 @@ class HomeController < ApplicationController
 
   def prueba
   end
+
+  def about
+  end
+
 end
