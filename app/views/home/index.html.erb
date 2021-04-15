@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+    <title>About</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+ </head>
+  <body>
+
+    <!--ABOUT US-->
+    <div class="p-4 p-md-5 text-white bg-success  border border-secondary" style="filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));">
+        <div class="px-0">
+            <h1 class="display-4  font-monospace fs-2 mt-5">About us</h1>
+            <p class="lead my-3">Bis store is a web store designed by the students of the group TIDBIS41M where you can buy comfortable clothes with the emblematic logo and pet of our school representing everything that the BIS means. A model with The Bilingual International and Sustainable University Model developed to meet the strong demand of the business sector and respond in a more competitive way to the requirements of the export industry that each day expands its borders more and requires bilingual personnel with high technological capacity. So if you use one of our clothes it is not only a clothes it is everything that the BIS school represents.</p>
+        </div>
+    </div>
+
+    <!--Missions-->
+    <div class="row mb-2 mt-5">
+        <div class="col-md-6">
+            <div class="row g-0 ml-4 overflow-hidden flex-md-row mb-4 h-md-250 position-relative" style="filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <div class="card mb-3">
+                        <h1 class=" text-center mt-4 fs-2 text-success fw-bold ">Mission</h1>
+                            <div class="card-body text-dark">
+                                <p class="card-text text-center mr-3 ml-3">Our mission is to sell many clothes to promote the school and draw the attention of the new graduates from high school, to bring many students and give them the opportunity of an education where they can improve their capacities learning about technology and business expanding their job opportunity and securing a good quality of life.</p>
+                                <div align="center">
+                                  <img src="https://noticias.utch.edu.mx/wp-content/uploads/sites/4/2018/09/cropped-cazador_ico.png" class="card-img img-fluid" style="width: 250px; height: 250px; ">
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+            </div>
+            </div>
+            
+    <!--streaming API-->
+            <div class="col-md-6" style="filter:">
+                <div class="row g-0  mr-4  flex-md-row mb-4  h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static" >
+                      <h1 class=" text-center mt-1 fs-2 text-success fw-bold ">Video</h1>
+                       <div class="row g-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <img src="https://pbs.twimg.com/ext_tw_video_thumb/1126505324742004742/pu/img/k9iUWVPMTa53Z5uX.jpg" class="rounded mx-auto d-block" width="467" height="380" >
+                        </div>
+                    </div> 
+                </div>
+            </div>   
+        </div>
+    </div>
+
+
+   
+    <!--geo api-->
+    <div class="card ml-5 mr-5"  style="filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));">
+      <div class="card-title">
+        <h5 class="card-title fw-bold text-light text-center bg-success pb-2 pt-2" style="font-size: 50px;">Location</h5>
+        <p class="card-text text-center mt-4">New campus, located on the Chihuahua-Aldama highway, Km 3 s / n, Fracc. Colinas del León, C.P. 31313. (next to high school 21 and UTCH Sur).</p>
+      </div>
+      <div align="center">
+            <div style='width: 800px;'>  
+                <div class ="mb-5" id="map" style='width: 800px; height: 400px;'></div>  
+            </div>  
+
+            <script type="text/javascript">  
+            handler = Gmaps.build('Google');  
+            handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){  
+            markers = handler.addMarkers([  
+                {  
+                "lat": 28.661681120954412,  
+                "lng": -106.04017808415898,  
+                "picture": {  
+                    "width":  32,  
+                    "height": 32  
+                },  
+                "infowindow": "SJSU"  
+                }  
+            ]);  
+            handler.bounds.extendWith(markers);  
+            handler.fitMapToBounds();  
+            });  
+            </script>
+      </div>
+    </div>
+
+
+</body>
