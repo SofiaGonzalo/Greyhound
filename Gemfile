@@ -26,11 +26,20 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
+
+gem 'google-api-client'
+
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'devise'
 
 gem 'hamlit'
+gem 'bootsnap', '>= 1.4.4', require: false
+
+gem 'devise'
+gem 'hamlit'
+gem 'jquery-rails'
+gem 'gmaps4rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -46,6 +55,7 @@ group :development do
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
+  gem 'hamlit-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

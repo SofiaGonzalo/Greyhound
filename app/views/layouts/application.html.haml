@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title BIStore
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    / Bootstrap link
+    %link{:href => "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", :rel => "stylesheet"}/
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    = yield
+    #message_holder
+      %h1 Real Time chat
+      #text_box
+      = form_for @message, remote: true do |f|
+        #in= f.text_field :content
+        = f.submit
+    / Js files for bootstrap
+    %script{:src => "https://code.jquery.com/jquery-3.3.1.slim.min.js"}
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"}
+    %script{:src => "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"}
