@@ -33,6 +33,14 @@ gem 'hamlit'
 gem 'jquery-rails'
 gem 'gmaps4rails'
 
+gem 'omniauth-google-oauth2'
+gem 'yt', '~> 0.13.7'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+gem 'rails-observers'
+gem 'active_type', '0.3.1'
+gem 'sprockets-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

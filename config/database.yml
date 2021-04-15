@@ -26,7 +26,7 @@ development:
   database: BIStore_development
   user: postgres
   #password: admin
-  password: 1234
+  password: beyondlibertycity
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -63,7 +63,7 @@ test:
   database: BIStore_test
   user: postgres
   #password: admin
-  password: 1243
+  password: beyondlibertycity
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is

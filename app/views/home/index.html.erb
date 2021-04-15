@@ -35,10 +35,39 @@
             <div class="col-md-6" style="filter:">
                 <div class="row g-0  mr-4  flex-md-row mb-4  h-md-250 position-relative">
                     <div class="col p-4 d-flex flex-column position-static" >
-                      <h1 class=" text-center mt-1 fs-2 text-success fw-bold ">Video</h1>
+                      <h1 class=" text-center mt-1 fs-2 text-success fw-bold ">Videos</h1>
                        <div class="row g-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));">
                         <div class="col p-4 d-flex flex-column position-static">
-                            <img src="https://pbs.twimg.com/ext_tw_video_thumb/1126505324742004742/pu/img/k9iUWVPMTa53Z5uX.jpg" class="rounded mx-auto d-block" width="467" height="380" >
+                            <% if @videos.any? %>
+                              <div class="container">
+                                <div id="player-wrapper"></div>
+                                <% @videos.in_groups_of(3) do |group| %>
+                                  <div class="row">
+                                    <% group.each do |video| %>
+                                      <% if video %>
+                                        <div class="col-md-4">
+                                          <div class="yt_video thumbnail">
+                                            <%= link_to image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
+                                                                  class: 'img-rounded'),
+                                                        "#{video.link}", target: '_blank' %>
+                                            <div class="caption">
+                                              <h5><%= video.title %></h5>
+                                              <% if video.published_at %>
+                                              <p>Published at <%= video.published_at.strftime('%-d %B %Y %H:%M:%S') %></p>
+                                              <% end %>
+                                              <p>
+                                                <span class="glyphicon glyphicon glyphicon-thumbs-up"></span> <%= video.likes %>
+                                                <span class="glyphicon glyphicon glyphicon-thumbs-down"></span> <%= video.dislikes %>
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      <% end %>
+                                    <% end %>
+                                  </div>
+                                <% end %>
+                              </div>
+                            <% end %>
                         </div>
                     </div> 
                 </div>
