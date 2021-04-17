@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :products
-  root "home#index"
+
+  resources :videos, only: [:index, :new, :create]
+  resources :video_uploads, only: [:new, :create]
+
+  root "videos#new"
 
   get "/prueba", to: "home#prueba"
 

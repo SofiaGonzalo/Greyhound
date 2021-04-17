@@ -34,6 +34,20 @@ gem 'hamlit'
 
 gem 'figaro'
 
+gem 'omniauth-google-oauth2'
+
+gem 'yt', '~> 0.13.7'
+
+gem 'bootstrap-sass'
+
+gem 'autoprefixer-rails'
+
+gem 'rails-observers'
+
+gem 'active_type', '0.3.1'
+
+gem 'sprockets-rails'
+
 gem 'jquery-rails'
 
 gem 'gmaps4rails'

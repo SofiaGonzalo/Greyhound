@@ -1,36 +1,41 @@
 %p#notice= notice
+.row
+  .col-sm-6
+    .card{:style => "width: 50rem;"}
+      %img.card-img-top{:alt => "Card image cap", :src => @product.url}
+    
+  .col-sm-6
+    %p
+      %h1 Name:
+      = @product.name
+    %p
+      %b Description:
+      = @product.description
+    %p
+      %b Price:
+      = @product.price
+    %input.d-none{ :id => "price", :value => @product.price}
 
-%p
-  %b Name:
-  = @product.name
-%p
-  %b Description:
-  = @product.description
-%p
-  %b Price:
-  = @product.price
+      :javascript
+        var costt;
+        costt = document.getElementById('price').value;
 
-%input.d-none{ :id => "price", :value => @product.price}
-
-:javascript
-  var costt;
-  costt = document.getElementById('price').value;
-
-%div#paypal-button-container 
-= link_to 'Edit', edit_product_path(@product)
-\|
-= link_to 'Back', products_path
-
-#fb-root
-  :javascript
-    (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-/ Your share button code
-.fb-share-button{"data-href" => "https://www.your-domain.com/your-page.html", "data-layout" => "button_count"}
-%a.ig-b-.ig-b-v-24{:href => "http://instagram.com/###?ref=badge"}
-%a.twitter-share-button{"data-size" => "large", :href => "https://twitter.com/intent/tweet?text=Hello%20world"}Tweet
+    %div#paypal-button-container 
+    #fb-root
+      :javascript
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    %a.ig-b-.ig-b-v-24{:href => "http://instagram.com/###?ref=badge"}
+    %a.twitter-share-button{"data-size" => "large", :href => "https://twitter.com/intent/tweet?text=Hello%20world"}Tweet
+    
+    / Your share button code
+    .fb-share-button{"data-href" => "https://www.your-domain.com/your-page.html", "data-layout" => "button_count"}
+    %br
+    = link_to 'Edit', edit_product_path(@product)
+    \|
+    = link_to 'Back', products_path
