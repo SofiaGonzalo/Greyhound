@@ -48,6 +48,8 @@ gem 'active_type', '0.3.1'
 
 gem 'sprockets-rails'
 
+gem 'remotipart' 
+
 gem 'jquery-rails'
 
 gem 'gmaps4rails'

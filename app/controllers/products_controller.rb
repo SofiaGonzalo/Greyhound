@@ -4,23 +4,28 @@ class ProductsController < ApplicationController
   # GET /products or /products.json
   def index
     @products = Product.all
+    @card = Card.new
   end
 
   # GET /products/1 or /products/1.json
   def show
+    @card = Card.new
   end
 
   # GET /products/new
   def new
+    @card = Card.new
     @product = Product.new
   end
 
   # GET /products/1/edit
   def edit
+    @card = Card.new
   end
 
   # POST /products or /products.json
   def create
+    @card = Card.new
     @product = Product.new(product_params)
 
     respond_to do |format|
@@ -36,6 +41,7 @@ class ProductsController < ApplicationController
 
   # PATCH/PUT /products/1 or /products/1.json
   def update
+    @card = Card.new
     respond_to do |format|
       if @product.update(product_params)
         format.html { redirect_to @product, notice: "Product was successfully updated." }
@@ -49,6 +55,7 @@ class ProductsController < ApplicationController
 
   # DELETE /products/1 or /products/1.json
   def destroy
+    @card = Card.new
     @product.destroy
     respond_to do |format|
       format.html { redirect_to products_url, notice: "Product was successfully destroyed." }
